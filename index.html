@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+
+    <link rel="stylesheet" href="styles.css" media="screen" title="no title" charset="utf-8">
+  </head>
+
+
+  <body ng-app="ngAnimeApp" ng-controller="animeController">
+
+
+    <!-- Navigation -->
+    <header class="header">
+
+      <h1><a href="#/">Utopianime</a></h1>
+
+      <ul>
+        <li><a href="#top">Home</a></li>
+        <li><a href="#search">Search</a></li>
+        <li><a href="#aboutus">About Us</a></li>
+        <li><a href="#contactus">Contact Us</a></li>
+      </ul>
+    </header>
+
+
+      <!-- <ng-view></ng-view> -->
+
+
+
+      <div class="homeDiv" id="top">
+        <img src="images/boy.jpeg" onmouseover="this.src='images/girl.jpeg'" onmouseout="this.src='images/boy.jpeg'">
+      </div>
+
+
+
+      <div class="imgContainer">
+
+        <div class="gallery">
+          <img src="images/naruto.jpg">
+
+        </div>
+
+        <div class="gallery">
+          <img src="images/apple.jpeg" onmouseover="this.src='images/apple1.png'" onmouseout="this.src='images/apple.jpeg'">
+        </div>
+
+        <div class="gallery">
+          <img src="images/dark.png">
+        </div>
+
+        <div class="gallery">
+          <img src="images/friends.jpeg" onmouseover="this.src='images/friends1.jpg'" onmouseout="this.src='images/friends.jpeg'">
+
+        </div>
+
+      </div>
+
+
+      <div class="fanFaves">
+        <h1>Fan Favorites</h1>
+
+        <div class="fanFaveRow">
+
+          <!-- <a class="slideButton" id="leftSlideButton" onclick="#"><img src="images/leftarrow.png"></a> -->
+
+          <a href="https://hummingbird.me/anime/naruto" target="_blank"><img class="slides" src="images/naruto1.jpg" onmouseover="this.src='images/naruto2.png'" onmouseout="this.src='images/naruto1.jpg'">
+          <a href="https://hummingbird.me/anime/akira" target="_blank"><img class="slides" src="images/akira.jpg"  onmouseover="this.src='images/akira1.jpg'" onmouseout="this.src='images/akira.jpg'">
+          <a href="https://hummingbird.me/anime/yawara" target="_blank"><img class="slides" src="images/yawara.jpeg"  onmouseover="this.src='images/yawara1.jpg'" onmouseout="this.src='images/yawara.jpeg'">
+          <a href="https://hummingbird.me/anime/bleach" target="_blank"><img class="slides" src="images/bleach.jpg"  onmouseover="this.src='images/bleachbw.png'" onmouseout="this.src='images/bleach.jpg'"></a>
+
+
+          <!-- <a class="slideButton" id="rightSlideButton" onclick="#"><img src="images/rightarrow.png"></a> -->
+
+        </div>
+
+      </div>
+
+
+      <div class="anime" id="search">
+
+        <h1>Search your fave anime shows now!</h1>
+
+        <form class="form">
+          <input id="searchInput" type="text" placeholder="Search By Genre" ng-model="genre">
+        </form>
+
+        <div class="animeSearchDiv">
+
+          <div class="animeDiv" ng-repeat="anime in animeData | filter: genre">
+            <!-- <h2>{{anime}}</h2> -->
+            <a href="{{anime.url}}" target="_blank"><img ng-src="{{anime.cover_image}}"></a>
+
+        </div>
+
+      </div>
+
+      <!-- <span ng-hide="!animeData.length">Sorry, what you entered is unavailable. Please search again.</span> -->
+    </div>
+
+
+      <div class="aboutUs" id="aboutus">
+
+        <h1>About Us</h1>
+
+        <p>
+          This website was created out of frustration for good and valid reccomendations for a show that is supposed to be similar to one you've just watched. Ever fell in love with a show you just finished binge watching and was skeptical and reluctant to try a new show because you weren't sure if it were similar to one that you've recently finished and loved? Our frustration stems from that which birthed [ANIME TITLE]. Here, you can enjoy the
+        </p>
+
+      </div>
+
+
+
+      <!-- add user favorites here: -->
+
+
+      <!--
+
+      <form>
+      Select a topic:
+        <select ng-model="myVar">
+          <option value="">
+          <option value="six hours">Dogs
+          <option value="eight hours">Tutorials
+          <option value="10 hours">Cars
+        </select>
+      </form>
+
+      <div ng-switch="myVar">
+        <div ng-switch-when="six hours">
+          <h1>Dogs</h1>
+            <p>Welcome to a world of dogs.</p>
+        </div>
+
+        <div ng-switch-when="eight hours">
+          <h1>Tutorials</h1>
+            <p>Learn from examples.</p>
+        </div>
+
+        <div ng-switch-when="10 hours">
+          <h1>Cars</h1>
+            <p>Read about cars.</p>
+        </div>
+      </div> -->
+
+      <!-- aboutus page -->
+
+
+
+
+
+      <!-- contactus page -->
+
+      <div class="contactUs" id="contactus">
+        <h1>Contact Us</h1>
+
+        <h3>Feel free to contact us with any questions, comments, or concerns.</h3>
+
+        <form class="contactForm" method="post" ng-model="contactForm">
+          <p><input ng-model="form.name" type="text" placeholder="Name"></p>
+          <p><input ng-model="form.email" type="email" placeholder="example@email.com"></p>
+          <p><input ng-model="form.subject" type="text" placeholder="Subject"></p>
+          <p><input ng-model="form.comments" id="textarea" type="textarea" placeholder="Your comments here..."></p>
+          <button type="button" name="button" ng-click="emailFunction(form)">Submit</button>
+          <!-- <button type="button" value="Send" ng-click="emailFunction()">Submit</button> -->
+        </form>
+
+      </div>
+
+
+
+
+    <!-- Footer -->
+
+    <footer class="footer">
+      Copyright by <span>Charlene Okwu</span>.
+    </footer>
+
+
+
+    <!-- Scripts tags -->
+
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.7/angular.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.7/angular-route.min.js"></script>
+    <script   src="https://code.jquery.com/jquery-3.1.0.min.js"></script>
+    <script src="ngApp2.js"></script>
+    <script src="directive.js"></script>
+    <script src="config.js"></script>
+  </body>
+
+</html>

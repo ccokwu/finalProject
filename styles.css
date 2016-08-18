@@ -1,0 +1,259 @@
+@font-face {
+  font-family: "adam";
+  src: url("fonts/Adam.otf";)
+}
+
+html, body {
+  margin: 0;
+  background-color: black;
+}
+
+.header {
+  position: fixed;
+  padding-top: 5%;
+  width: 100%;
+  margin-top: -5%;
+}
+
+.header h1 {
+  color: white;
+  background-color: #111111;
+  text-align: center;
+  margin-top: 0;
+  margin-bottom: 0;
+  padding-top: 5%;
+  font-family: "adam";
+  text-transform: uppercase;
+  font-size: 60px;
+}
+
+.header h1 a {
+  text-decoration: none;
+  color: white;
+}
+
+.header ul {
+  background-color: #111111;
+  text-align: center;
+  margin-top: 0;
+  padding-top: 2%;
+  padding-bottom: 4%;
+  padding-right: 5%;
+  font-family: "adam";
+  text-transform: uppcase;
+}
+
+.header ul li {
+  background-color: #111111;
+  color: white;
+  list-style-type: none;
+  display: inline;
+  padding-left: 5%;
+}
+
+.header ul li a {
+  color: white;
+  text-decoration: none;
+
+}
+
+.header ul li a:hover {
+  color: gray;
+}
+
+.homeDiv {
+  padding-top: 15%;
+}
+
+.homeDiv img {
+  width: 100%;
+}
+
+.imgContainer .gallery {
+  display: inline;
+  text-align: center;
+}
+
+.gallery img {
+  width: 315px;
+  height: 315px;
+}
+
+.fanFaves {
+  background-color: #111111;
+  margin-top: 5%;
+}
+
+.fanFaves h1 {
+  text-align: center;
+  color: gray;
+  font-family: Helvetica;
+  text-transform: uppercase;
+  font-size: 25px;
+  padding-top: 10%;
+  padding-bottom: 3%;
+}
+
+img.slides {
+  width: 250px;
+  height: 250px;
+  padding-bottom: 10%;
+}
+
+.fanFaveRow {
+  margin-left: 11%;
+}
+
+/*.slideButton {
+  color: white;
+}*/
+
+/*#leftSlideButton img {
+  width: 50px;
+  height: 50px;
+  margin-bottom: 13%;
+  margin-right: 3%;
+}
+
+#rightSlideButton img {
+  width: 50px;
+  height: 50px;
+  margin-bottom: 13%;
+  margin-left: 3%;
+}*/
+
+.form {
+  padding-top: 3%;
+  padding-bottom: 5%;
+}
+
+.form #searchInput {
+  padding-top: 15px;
+  padding-bottom: 15px;
+  padding-left: 5px;
+  width: 800px;
+  margin-left: 20%;
+}
+
+.anime h1 {
+  color: white;
+  font-family: "adam";
+  text-align: center;
+  padding-top: 20%;
+}
+
+.animeSearchDiv {
+ margin-left: 9%;
+ padding-bottom: 10%;
+}
+
+.anime span {
+  color: white;
+  font-family: "adam";
+  text-align: center;
+  margin-left: 40%;
+}
+
+.animeDiv img {
+  display: inline;
+  width: 150px;
+  height: 250px;
+}
+
+.animeDiv {
+  display: inline;
+
+}
+
+.aboutUs {
+  background-color: #111111;
+  margin-top: 5%;
+  padding-top: 5%;
+  padding-bottom: 5%;
+}
+
+.aboutUs h1 {
+  color: white;
+  text-align: center;
+  text-transform: uppercase;
+  font-family: Helvetica;
+  padding-top: 10%;
+}
+
+.aboutUs p {
+  color: white;
+  font-family: "adam";
+  text-align: justify;
+  margin-left: 20%;
+  margin-right: 20%;
+  padding-bottom: 10%;
+}
+
+.contactUs {
+  margin-top: 5%;
+  margin-bottom: 5%;
+  margin-left: 28%;
+  padding-top: 15%;
+}
+
+.contactUs h1 {
+  color: white;
+  font-family: Helvetica;
+  font-size: 30px;
+  text-align: center;
+  text-transform: uppercase;
+  margin-right: 38%;
+  padding-top: 10%;
+}
+
+.contactUs h3 {
+  color: white;
+  font-family: "adam";
+  font-size: 15px;
+}
+
+.contactForm {
+  padding-bottom: 10%;
+}
+
+.contactUs input {
+  width: 550px;
+  padding-top: 15px;
+  padding-bottom: 15px;
+  padding-left: 5px;
+  font-size: 13px;
+}
+
+.contactUs #textarea {
+  height: 80px;
+}
+
+.contactUs button {
+  width: 560px;
+  padding-top: 15px;
+  padding-bottom: 15px;
+}
+
+.contactUs button:hover {
+  background-color: black;
+  color: white;
+}
+
+.formSubmission h4 {
+  color: white;
+  text-align: center;
+  font-family: "adam";
+}
+
+.footer {
+  background-color: #111111;
+  color: white;
+  padding-top: 5%;
+  padding-bottom: 5%;
+  font-family: "adam";
+  text-align: center;
+}
+
+.footer span:hover {
+  color: pink;
+}
